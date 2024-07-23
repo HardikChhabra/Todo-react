@@ -9,7 +9,7 @@ export const TodoWrapperLocalStorage = () => {
     const [todos, setTodos] = useState([])
 
     useEffect(() => {
-        const savedTodos = JSON.parse(localStorage.getItem('todos'));
+        const savedTodos = JSON.parse(localStorage.getItem('todos')) || [];
         setTodos(savedTodos);
     }, []);
 
